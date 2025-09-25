@@ -3,6 +3,10 @@ from app.pages.dashboard import dashboard
 from app.pages.sign_in import sign_in
 from app.pages.sign_up import sign_up
 from app.states.auth_state import AuthState
+from app.pages.transactions import transactions_page
+from app.pages.accounts import accounts_page
+from app.pages.budgeting import budgeting_page
+from app.pages.settings import settings_page
 
 app = rx.App(
     theme=rx.theme(appearance="light"),

@@ -38,15 +38,15 @@ class State(rx.State):
     ]
     transactions_data: list[TransactionData] = [
         {
-            "date": "2024-07-01",
-            "description": "Salary Deposit",
-            "amount": 5000,
+            "date": "2024-07-10",
+            "description": "Dividend Income",
+            "amount": 200,
             "type": "income",
         },
         {
-            "date": "2024-07-02",
-            "description": "Groceries",
-            "amount": -150,
+            "date": "2024-07-05",
+            "description": "Rent",
+            "amount": -2000,
             "type": "expense",
         },
         {
@@ -56,15 +56,15 @@ class State(rx.State):
             "type": "investment",
         },
         {
-            "date": "2024-07-05",
-            "description": "Rent",
-            "amount": -2000,
+            "date": "2024-07-02",
+            "description": "Groceries",
+            "amount": -150,
             "type": "expense",
         },
         {
-            "date": "2024-07-10",
-            "description": "Dividend Income",
-            "amount": 200,
+            "date": "2024-07-01",
+            "description": "Salary Deposit",
+            "amount": 5000,
             "type": "income",
         },
     ]
