@@ -1,0 +1,9 @@
+
+reflex==0.8.12
+fastapi
+uvicorn
+sqlalchemy
+pandas
+plotly-express
+httpx
+plotly
