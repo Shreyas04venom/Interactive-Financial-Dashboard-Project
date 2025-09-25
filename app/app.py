@@ -22,3 +22,7 @@ app = rx.App(
 app.add_page(dashboard, route="/", on_load=AuthState.check_session)
 app.add_page(sign_in, route="/sign-in")
 app.add_page(sign_up, route="/sign-up")
+app.add_page(transactions_page, on_load=AuthState.check_session)
+app.add_page(accounts_page, on_load=AuthState.check_session)
+app.add_page(budgeting_page, on_load=AuthState.check_session)
+app.add_page(settings_page, on_load=AuthState.check_session)

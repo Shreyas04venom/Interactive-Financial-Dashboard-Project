@@ -4,6 +4,7 @@ import reflex as rx
 class AuthState(rx.State):
     users: dict[str, str] = {"admin@reflex.com": "password123"}
     in_session: bool = True
+    user_email: str = "admin@reflex.com"
 
     @rx.event
     def sign_up(self, form_data: dict[str, str]):
@@ -12,6 +13,7 @@ class AuthState(rx.State):
         else:
             self.users[form_data["email"]] = form_data["password"]
             self.in_session = True
+            self.user_email = form_data["email"]
             return rx.redirect("/")
 
     @rx.event
@@ -21,6 +23,7 @@ class AuthState(rx.State):
             and self.users[form_data["email"]] == form_data["password"]
         ):
             self.in_session = True
+            self.user_email = form_data["email"]
             return rx.redirect("/")
         else:
             self.in_session = False
@@ -29,6 +32,7 @@ class AuthState(rx.State):
     @rx.event
     def sign_out(self):
         self.in_session = False
+        self.user_email = ""
         return rx.redirect("/sign-in")
 
     @rx.event

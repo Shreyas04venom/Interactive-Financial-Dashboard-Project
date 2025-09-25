@@ -29,4 +29,5 @@ class TransactionFormState(rx.State):
             },
         )
         main_state.transactions_data.insert(0, new_transaction)
+        yield rx.toast.success("Transaction added successfully!")
         self.show_dialog = False
